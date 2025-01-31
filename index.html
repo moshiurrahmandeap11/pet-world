@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet World</title>
+    <!-- tailwind css cdn install -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind css script install -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "nav-bg": "rgb(255, 249, 244)",
+              "btn-bg": "rgb(255, 220, 38)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- daisy ui cdn install -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- favicon add -->
+    <link
+      rel="shortcut icon"
+      href="./images/paw-print.png"
+      type="image/x-icon"
+    />
+    <!-- google font ADLaM Display install -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- google font sora install  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- some custom file for extra benefit -->
+
+    <style>
+      .font-sora {
+        font-family: "Sora", serif;
+      }
+
+      .font-adlam {
+        font-family: "ADLaM Display", serif;
+      }
+
+      .normal-black {
+        color: rgb(17, 17, 17);
+      }
+
+      .tborder {
+        box-sizing: border-box;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+      }
+
+      /* animation */
+
+      .infinity-animation {
+        animation: bounce 1s infinite;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sora">
+    <!-- header -->
+
+    <header class="w-full">
+      <!-- nav bar  -->
+
+      <div
+        class="navbar md:w-[90%] lg:[90%] md:mx-auto lg:mx-auto bg-[#fff9f4] pb-4 border-b-black border-b-[1px] lg:border-none"
+      >
+        <div class="navbar-start">
+          <div class="dropdown hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a class="font-normal normal-black text-xl" href="#"
+                  >Find a Pet</a
+                >
+              </li>
+              <li>
+                <a class="font-normal normal-black text-xl" href="#">Breeds</a>
+              </li>
+              <li>
+                <a class="font-normal normal-black text-xl" href="#"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <img
+            class="md:mr-4 lg:mr-4 ml-3 md:ml-0 lg:ml-0 mt-5 md:mt-0 lg:mt-0"
+            src="./images/logo-header.png"
+            alt="header logo"
+          />
+          <a
+            class="font-adlam hidden md:block lg:block normal-black font-normal md:text-2xl lg:text-2xl"
+            >Pet World</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a class="font-normal normal-black text-xl" href="#"
+                >Find a Pet</a
+              >
+            </li>
+            <li>
+              <a class="font-normal normal-black text-xl" href="#">Breeds</a>
+            </li>
+            <li>
+              <a class="font-normal normal-black text-xl" href="#"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <i
+            class="fa-regular fa-bell hidden md:block lg:block md:mr-4 lg:mr-4 cursor-pointer"
+          ></i>
+          <i
+            class="fa-solid fa-magnifying-glass hidden md:block lg:block md:mr-4 lg:mr-4 cursor-pointer"
+          ></i>
+          <button
+            class="btn btn-active hidden md:block lg:block border-[#ffdc26] bg-transparent md:mr-4 lg:mr-4 md:px-8 md:py-4 lg:px-8 lg:py-4"
+          >
+            LogIn
+          </button>
+          <button
+            class="btn bg-[#ffdc26] py-3 px-8 hidden md:block lg:block"
+            type="submit"
+          >
+            Register
+          </button>
+        </div>
+        <i
+          class="fa-solid fa-bars md:hidden lg:hidden w-6 h-4 text-3xl mr-3"
+        ></i>
+      </div>
+
+      <!-- nav bar end -->
+    </header>
+
+    <!-- header end -->
+
+    <!-- main -->
+
+    <main>
+      <!-- hero section -->
+
+      <section class="w-full mt-20 md:mt-[100px] lg:mt-[100px] mb-[140px]">
+        <div class="md:w-[90%] md:mx-auto lg:w-[90%] lg:mx-auto">
+          <div class="flex flex-col">
+            <div>
+              <h1
+                class="font-normal font-adlam w-[358px] font- normal-black text-3xl md:text-[56px] md:leading-[73px] lg:text-[56px] lg:leading-[73px] mb-4 md:w-[681px] lg:w-[681]"
+              >
+                Pamper Your Pet, Because They Deserve the Bes
+              </h1>
+              <p
+                class="font-normal normal-black text-xl mb-6 md:w-[672px] lg:w-[672px]"
+              >
+                Discover a world of treats, toys, and essentials handpicked for
+                your furry friends. Shop now and make tails wag with joy!
+              </p>
+              <button
+                class="btn bg-[#ffdc26] py-3 px-8 infinity-animation"
+                type="submit"
+              >
+                Find a Pet
+              </button>
+              <div class="-mt-20 lg:-mt-[400px]">
+                <img
+                  class="w-full"
+                  src="./images/Adobe Express - file.png"
+                  alt="hero caption big cat"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- hero section end -->
+
+      <!-- browse by category section -->
+      <section class="w-full mb-[140px]">
+        <div class="md:w[90%] md:mx-auto lg:w-[90%] mx-auto lg:mx-auto">
+          <h2
+            class="font-adlam font-normal normal-black ml-4 lg:ml-0 text-2xl mb-12"
+          >
+            Browse By Categories
+          </h2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-4 lg:gap-6"
+          >
+            <!-- card 1 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/dog-cartoon.png" alt="dog-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Dog
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+            <!-- card 2 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/fish-cartoon.png" alt="fish-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Fish
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+            <!-- card 3 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/cat-cartoon.png" alt="cat-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Cat
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+            <!-- card 4 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/bird-cartoon.png" alt="bird-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Birds
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+            <!-- card 5 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/mouse-cartoon.png" alt="mouse-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Small Pet
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+            <!-- card 6 -->
+            <div
+              class="ml-4 lg:ml-0 w-[174px] lg:w-[200px] bg-[#f9df8a] px-[41px] lg:px-[70px] py-[29px] lg:py-[34px] rounded-xl"
+            >
+              <div class="-ml-5 cursor-pointer mb-6">
+                <div
+                  class="flex justify-center items-center bg-white w-[104px] h-[104px] rounded-full hover:border-[1px] border-[#ffffff] transition"
+                >
+                  <img src="./images/rabbit-cartoon.png" alt="rabbit-cartoon" />
+                </div>
+              </div>
+              <h3
+                class="text-center font-normal text-xl font-adlam mb-3 normal-black"
+              >
+                Rabbit
+              </h3>
+              <p
+                class="text-center font-normal text-base font-sora normal-black"
+              >
+                3 Items
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- browse by category section end -->
+
+      <!-- trending pet products -->
+
+      <section class="w-full mb-[140px]">
+        <div class="lg:w-[90%] mx-auto">
+          <h2
+            class="font-adlam font-normal normal-black ml-4 lg:ml-0 text-2xl lg:text-4xl mb-12"
+          >
+            Trending Pet Products
+          </h2>
+
+          <div class="flex flex-col md:flex-row lg:flex-row gap-y-4 lg:gap-6">
+            <!-- first side -->
+            <div
+              class="w-[370px] lg:w-[424px] ml-5 mb-4 lg:ml-0 bg-[#f9df8a] rounded-[10px] p-[40px]"
+            >
+              <h2 class="font-adlam font-normal text-4xl normal-black mb-6">
+                T-shirts For Dogs
+              </h2>
+              <p class="mb-6">
+                Discover a world of treats, toys, and essentials handpicked for
+              </p>
+              <button class="btn px-8 py-3" type="submit">Shop Now</button>
+              <div
+                class="bg-[#f9df8a] flex justify-center items-center ml-[150px] -mt-[90px]"
+              >
+                <img
+                  class="w-full"
+                  src="./images/cute-pet-small.png"
+                  alt="cute-pet-small"
+                />
+              </div>
+            </div>
+            <!-- second side -->
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 lg:gap-6 cursor-pointer"
+            >
+              <!-- card - 1 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/dog-cartoon.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              
+              <!-- card - 2 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/fish-cartoon.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              
+              <!-- card - 3 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/bird-cartoon.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              <!-- card - 4 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/rabbit-cartoon.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              
+              <!-- card - 5 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/bird-cartoon.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              <!-- card - 6 -->
+              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+                <div class="p-2 bg-[#fff9f4] rounded-xl">
+                  <img src="./images/pet-couch.png" alt="dog-cartoon" />
+                </div>
+                <div>
+                  <div class="rating mb-2">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-orange-400"
+                      checked="checked"
+                    />
+                    <p
+                      class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                    >
+                      4.5
+                    </p>
+                  </div>
+                  <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                    Pet Bed
+                  </h3>
+                  <p class="font-medium font-sora text-base normal-black mb-1">
+                    $39.99
+                  </p>
+                </div>
+              </div>
+              
+              <!-- card - 7 -->
+               <div>
+                <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:pt-4  lg:w-[260px]">
+                  <div class="p-2 bg-[#fff9f4] rounded-xl">
+                    <img src="./images/fish-cartoon.png" alt="dog-cartoon" />
+                  </div>
+                  <div>
+                    <div class="rating mb-2">
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked="checked"
+                      />
+                      <p
+                        class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                      >
+                        4.5
+                      </p>
+                    </div>
+                    <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                      Pet Bed
+                    </h3>
+                    <p class="font-medium font-sora text-base normal-black mb-4">
+                      $39.99
+                    </p>
+                  </div>
+                </div>
+               </div>
+              <!-- card - 8 -->
+               <div>
+                <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:pt-4 lg:w-[260px]">
+                  <div class="p-2 bg-[#fff9f4] rounded-xl">
+                    <img src="./images/pet-couch.png" alt="dog-cartoon" />
+                  </div>
+                  <div>
+                    <div class="rating mb-2">
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked="checked"
+                      />
+                      <p
+                        class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                      >
+                        4.5
+                      </p>
+                    </div>
+                    <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                      Pet Bed
+                    </h3>
+                    <p class="font-medium font-sora text-base normal-black mb-4">
+                      $39.99
+                    </p>
+                  </div>
+                </div>
+               </div>
+              
+              <!-- card - 9 -->
+               <div class="hidden md:block lg:block">
+                <div class="flex items-center tborder pl-3 gap-x-3 pt-4 lg:gap-x-6 lg:ml-0  lg:w-[260px]">
+                  <div class="p-2 bg-[#fff9f4] rounded-xl">
+                    <img src="./images/rabbit-cartoon.png" alt="dog-cartoon" />
+                  </div>
+                  <div>
+                    <div class="rating mb-2">
+                      <input
+                        type="radio"
+                        name="rating-2"
+                        class="mask mask-star-2 bg-orange-400"
+                        checked="checked"
+                      />
+                      <p
+                        class="font-sora font-normal text-[9px] normal-black ml-4 mt-1"
+                      >
+                        4.5
+                      </p>
+                    </div>
+                    <h3 class="font-medium font-sora text-xl normal-black mb-1">
+                      Pet Bed
+                    </h3>
+                    <p class="font-medium font-sora text-base normal-black mb-4">
+                      $39.99
+                    </p>
+                  </div>
+                </div>
+               </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- main end -->
+
+    <!-- footer -->
+
+    <footer></footer>
+
+    <!-- footer end -->
+  </body>
+</html>

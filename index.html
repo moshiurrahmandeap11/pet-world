@@ -132,6 +132,33 @@
         background: rgba(255, 220, 38, 0.2);
       }
 
+
+      /* typing animation */
+
+      @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 50%;
+            }
+        }
+
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .typing {
+            display: inline-block;
+            width: 0;
+            overflow: hidden;
+            border-right: 1px solid;
+            white-space: wrap;
+            animation: typing 1s steps(40) 1s 1 normal both, blink-caret 0.75s infinite;
+        }
+
       /* animation */
 
       .infinity-animation {
@@ -263,10 +290,13 @@
           <div class="flex flex-col">
             <div>
               <h1
-                class="font-normal font-adlam w-[358px] font- normal-black text-3xl md:text-[56px] md:leading-[73px] lg:text-[56px] lg:leading-[73px] mb-4 md:w-[681px] lg:w-[681]"
+                class="font-normal font-adlam w-[358px] font- normal-black text-3xl md:text-[56px] md:leading-[73px] lg:text-[56px] lg:leading-[73px] mb-4 md:w-[681px] lg:w-[681] typing"
               >
-                Pamper Your Pet, Because They Deserve the Bes
+                Pamper Your Pet, Because They Deserve the Best
               </h1>
+
+
+              
               <p
                 class="font-normal normal-black text-xl mb-6 md:w-[672px] lg:w-[672px]"
               >

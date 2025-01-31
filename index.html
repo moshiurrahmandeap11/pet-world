@@ -80,11 +80,33 @@
         color: rgb(17, 17, 17);
       }
 
+      .normal-white {
+        color: rgb(255, 255, 255);
+      }
+
       .tborder {
         box-sizing: border-box;
         border: 1px solid rgba(17, 17, 17, 0.1);
         border-radius: 10px;
         background: rgb(255, 255, 255);
+      }
+
+      .evbackground {
+        border-radius: 12px;
+        background: linear-gradient(
+          134.71deg,
+          rgb(248, 204, 251) 1.286%,
+          rgb(172, 210, 253) 100%
+        );
+      }
+
+      .evsbackground {
+        border-radius: 12px;
+        background: linear-gradient(
+          134.71deg,
+          rgb(255, 249, 244) 1.511%,
+          rgb(249, 223, 138) 100%
+        );
       }
 
       /* animation */
@@ -396,8 +418,6 @@
       </section>
       <!-- browse by category section end -->
 
-      <!-- trending pet products -->
-
       <section class="w-full mb-[140px]">
         <div class="lg:w-[90%] mx-auto">
           <h2
@@ -433,7 +453,9 @@
               class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 lg:gap-6 cursor-pointer"
             >
               <!-- card - 1 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/dog-cartoon.png" alt="dog-cartoon" />
                 </div>
@@ -459,9 +481,11 @@
                   </p>
                 </div>
               </div>
-              
+
               <!-- card - 2 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/fish-cartoon.png" alt="dog-cartoon" />
                 </div>
@@ -487,9 +511,11 @@
                   </p>
                 </div>
               </div>
-              
+
               <!-- card - 3 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/bird-cartoon.png" alt="dog-cartoon" />
                 </div>
@@ -516,7 +542,9 @@
                 </div>
               </div>
               <!-- card - 4 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/rabbit-cartoon.png" alt="dog-cartoon" />
                 </div>
@@ -542,9 +570,11 @@
                   </p>
                 </div>
               </div>
-              
+
               <!-- card - 5 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/bird-cartoon.png" alt="dog-cartoon" />
                 </div>
@@ -571,7 +601,9 @@
                 </div>
               </div>
               <!-- card - 6 -->
-              <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0  lg:w-[260px]">
+              <div
+                class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:w-[260px]"
+              >
                 <div class="p-2 bg-[#fff9f4] rounded-xl">
                   <img src="./images/pet-couch.png" alt="dog-cartoon" />
                 </div>
@@ -597,10 +629,12 @@
                   </p>
                 </div>
               </div>
-              
+
               <!-- card - 7 -->
-               <div>
-                <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:pt-4  lg:w-[260px]">
+              <div>
+                <div
+                  class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-2 lg:ml-0 lg:pt-4 lg:w-[260px]"
+                >
                   <div class="p-2 bg-[#fff9f4] rounded-xl">
                     <img src="./images/fish-cartoon.png" alt="dog-cartoon" />
                   </div>
@@ -621,15 +655,19 @@
                     <h3 class="font-medium font-sora text-xl normal-black mb-1">
                       Pet Bed
                     </h3>
-                    <p class="font-medium font-sora text-base normal-black mb-4">
+                    <p
+                      class="font-medium font-sora text-base normal-black mb-4"
+                    >
                       $39.99
                     </p>
                   </div>
                 </div>
-               </div>
+              </div>
               <!-- card - 8 -->
-               <div>
-                <div class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:pt-4 lg:w-[260px]">
+              <div>
+                <div
+                  class="flex items-center tborder pl-3 gap-x-3 lg:gap-x-6 ml-1 mr-2 lg:ml-0 lg:pt-4 lg:w-[260px]"
+                >
                   <div class="p-2 bg-[#fff9f4] rounded-xl">
                     <img src="./images/pet-couch.png" alt="dog-cartoon" />
                   </div>
@@ -650,16 +688,20 @@
                     <h3 class="font-medium font-sora text-xl normal-black mb-1">
                       Pet Bed
                     </h3>
-                    <p class="font-medium font-sora text-base normal-black mb-4">
+                    <p
+                      class="font-medium font-sora text-base normal-black mb-4"
+                    >
                       $39.99
                     </p>
                   </div>
                 </div>
-               </div>
-              
+              </div>
+
               <!-- card - 9 -->
-               <div class="hidden md:block lg:block">
-                <div class="flex items-center tborder pl-3 gap-x-3 pt-4 lg:gap-x-6 lg:ml-0  lg:w-[260px]">
+              <div class="hidden md:block lg:block">
+                <div
+                  class="flex items-center tborder pl-3 gap-x-3 pt-4 lg:gap-x-6 lg:ml-0 lg:w-[260px]"
+                >
                   <div class="p-2 bg-[#fff9f4] rounded-xl">
                     <img src="./images/rabbit-cartoon.png" alt="dog-cartoon" />
                   </div>
@@ -680,13 +722,67 @@
                     <h3 class="font-medium font-sora text-xl normal-black mb-1">
                       Pet Bed
                     </h3>
-                    <p class="font-medium font-sora text-base normal-black mb-4">
+                    <p
+                      class="font-medium font-sora text-base normal-black mb-4"
+                    >
                       $39.99
                     </p>
                   </div>
                 </div>
-               </div>
-              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- trending pet products -->
+
+      <!-- Everyday low Price  -->
+
+      <section class="w-full mb-[140px]">
+        <div class="w-[90%] mx-auto">
+          <h2
+            class="font-adlam font-normal normal-black ml-4 lg:ml-0 text-2xl lg:text-4xl mb-12"
+          >
+            Everyday low Price
+          </h2>
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- first box -->
+            <div
+              class="evbackground lg:py-[136px] lg:pl-[88px] flex lg:flex-row lg:items-center w-[357px] h-[334px] ml-4 lg:ml-0 lg:w-[784px] lg:h-[480px]"
+            >
+              <div>
+                <h4 class="hidden md:block lg:block font-normal font-sora normal-black text-xl mb-3">
+                  Under Price
+                </h4>
+                <h2 class="font-normal font-adlam noraml-black text-xl lg:text-3xl mb-2">
+                  Pet Grooming Mitt
+                </h2>
+                <p class="hidden md:block lg:block font-normal font-adlam normal-white text-2xl mb-4">
+                  (Easy Hair Removal)
+                </p>
+                <h2 class="font-normal font-adlam normal-black text-4xl lg:text-[56px]">
+                  $7.99
+                </h2>
+              </div>
+              <div>
+                <img src="./images/cute-dog-mid.png" alt="cute-dog-mid" />
+              </div>
+            </div>
+
+            <!-- second box -->
+            <div class="evsbackground lg:pt-[55px] lg:pl-[50px] flex lg:w-[512px] lg:h-[480px] relative" >
+              <div>
+                <h2 class="font-normal font-adlam noraml-black text-3xl mb-2">
+                  T-Shirt for Dogs
+                </h2>
+                <h2 class="font-normal font-adlam normal-black text-[56px]">
+                  $7.99
+                </h2>
+              </div>
+              <div class="w-[312px] h-[392px] absolute top-20 left-[150px]">
+                <img class="w-full" src="./images/cute-pet-mid.png" alt="cute-pet-mid" />
+              </div>
             </div>
           </div>
         </div>

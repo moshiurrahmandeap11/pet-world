@@ -109,6 +109,24 @@
         );
       }
 
+      .newsbg {
+        border-radius: 16px;
+        background: rgb(255, 249, 244);
+      }
+
+      .newsinput {
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        background: rgb(255, 255, 255);
+        color: rgb(196, 196, 196);
+        margin-bottom: 38px;
+      }
+
+      .footer-bg {
+        background: rgba(255, 220, 38, 0.5);
+      }
+
       /* animation */
 
       .infinity-animation {
@@ -236,7 +254,7 @@
       <!-- hero section -->
 
       <section class="w-full mt-20 md:mt-[100px] lg:mt-[100px] mb-[140px]">
-        <div class="md:w-[90%] md:mx-auto lg:w-[90%] lg:mx-auto">
+        <div class="md:w-[90%] md:mx-auto lg:w-[90%] lg:mx-auto ml-4">
           <div class="flex flex-col">
             <div>
               <h1
@@ -739,7 +757,7 @@
 
       <!-- Everyday low Price  -->
 
-      <section class="w-full mb-[140px]">
+      <section class="w-full">
         <div class="w-[90%] mx-auto">
           <h2
             class="font-adlam font-normal normal-black ml-4 lg:ml-0 text-2xl lg:text-4xl mb-12"
@@ -749,39 +767,61 @@
           <div class="flex flex-col lg:flex-row gap-6">
             <!-- first box -->
             <div
-              class="evbackground flex flex-col w-[357px] h-[334px]  lg:pl-[40px] lg:flex-row lg:items-center lg:ml-0 lg:w-[784px] lg:h-[480px]"
+              class="evbackground flex flex-col w-[357px] h-[334px] lg:pl-[40px] lg:flex-row lg:items-center lg:ml-0 lg:w-[784px] lg:h-[480px]"
             >
               <div>
-                <h4 class="hidden md:block lg:block font-normal font-sora normal-black text-xl mb-3">
+                <h4
+                  class="hidden md:block lg:block font-normal font-sora normal-black text-xl mb-3"
+                >
                   Under Price
                 </h4>
-                <h2 class="font-normal font-adlam noraml-black text-xl lg:text-3xl mb-2 lg:w-[286px] ml-8 lg:ml-0 mt-8 lg:mt-0">
+                <h2
+                  class="font-normal font-adlam noraml-black text-xl lg:text-3xl mb-2 lg:w-[286px] ml-8 lg:ml-0 mt-8 lg:mt-0"
+                >
                   Pet Grooming Mitt
                 </h2>
-                <p class="hidden md:block lg:block font-normal font-adlam normal-white text-2xl mb-4">
+                <p
+                  class="hidden md:block lg:block font-normal font-adlam normal-white text-2xl mb-4"
+                >
                   (Easy Hair Removal)
                 </p>
-                <h2 class="font-normal font-adlam normal-black text-4xl lg:text-[56px] ml-8 lg:ml-0">
+                <h2
+                  class="font-normal font-adlam normal-black text-4xl lg:text-[56px] ml-8 lg:ml-0"
+                >
                   $7.99
                 </h2>
               </div>
-              <div class="ml-[150px] lg:ml-10 -mt-[40px] lg:mt-[40px] w-[214px] lg:w-full">
+              <div
+                class="ml-[150px] lg:ml-10 -mt-[40px] lg:mt-[40px] w-[214px] lg:w-full"
+              >
                 <img src="./images/cute-dog-mid.png" alt="cute-dog-mid" />
               </div>
             </div>
 
             <!-- second box -->
-            <div class="evsbackground lg:pt-[55px] lg:pl-[50px] flex flex-col lg:w-[512px] lg:h-[480px] lg:relative" >
+            <div
+              class="evsbackground lg:pt-[55px] lg:pl-[50px] flex flex-col lg:w-[512px] lg:h-[480px] lg:relative"
+            >
               <div>
-                <h2 class="font-normal font-adlam noraml-black text-xl lg:text-3xl mb-2 ml-8 lg:ml-0 mt-8 lg:mt-0">
+                <h2
+                  class="font-normal font-adlam noraml-black text-xl lg:text-3xl mb-2 ml-8 lg:ml-0 mt-8 lg:mt-0"
+                >
                   T-Shirt for Dogs
                 </h2>
-                <h2 class="font-normal font-adlam normal-black text-[39px] lg:text-[56px] ml-8 lg:ml-0">
+                <h2
+                  class="font-normal font-adlam normal-black text-[39px] lg:text-[56px] ml-8 lg:ml-0"
+                >
                   $7.99
                 </h2>
               </div>
-              <div class=" w-[217px] h-[273px] ml-[130px] -mt-[40px] lg:w-[312px] lg:h-[392px] lg:absolute lg:top-[120px]">
-                <img class="w-full" src="./images/cute-pet-mid.png" alt="cute-pet-mid" />
+              <div
+                class="w-[217px] h-[273px] ml-[130px] -mt-[40px] lg:w-[312px] lg:h-[392px] lg:absolute lg:top-[120px]"
+              >
+                <img
+                  class="w-full"
+                  src="./images/cute-pet-mid.png"
+                  alt="cute-pet-mid"
+                />
               </div>
             </div>
           </div>
@@ -790,14 +830,90 @@
 
       <!-- everyday low price section end -->
 
-      <!--  -->
+      <!-- newsletter section  -->
+
+      <section class="w-full">
+        <div class="w-[90%] mx-auto bg-[#fff9f4] rounded-md  relative  lg:top-[200px] z-10">
+          <div class="hero min-h-screen">
+            <div class="hero-content flex-col lg:flex-row gap-20">
+              <img
+                src="./images/cute-pet-mid.png"
+                class="max-w-sm rounded-lg lg:ml-20"
+              />
+              <div>
+                <h1
+                  class="font-normal normal-black font-adlam text-[22px] lg:text-4xl text-center lg:text-left"
+                >
+                  Get Pawsome News!
+                </h1>
+                <p
+                  class="py-6 font-normal normal-black text-base lg:text-xl font-sora text-center lg:text-left"
+                >
+                  Exclusive training tips, ticks, product deals and more.
+                </p>
+                <input
+                  class="newsinput text-sm pl-4 w-[312px] py-2 lg:w-[472px] lg:py-5"
+                  type="text"
+                  placeholder="Enter email...."
+                />
+                <br />
+                <div class="text-center lg:text-left">
+                  <button
+                    class="btn bg-[#ffdc26] rounded-md py-3 px-8 text-xl normal-black font-normal"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- main end -->
 
     <!-- footer -->
 
-    <footer></footer>
+    <footer class="footer-bg w-full">
+      <div class="w-[90%] mx-auto pt-[500px] relative -mt-[400px] lg:mt-0 lg:pt-[300px]">
+        <div class="flex flex-col lg:flex-row justify-evenly">
+          <!-- first item -->
+        <div class="mb-9">
+          <div class="flex gap-4 items-center mb-6">
+            <!-- footer image -->
+            <img src="./images/logo-footer.png" alt="footer logo" />
+            <a
+              class="font-adlam normal-black font-normal text-xl md:text-2xl lg:text-2xl"
+              >Pet World</a
+            >
+          </div>
+          <p class="font-normal normal-black text-base lg:text-xl font-sora lg:w-[426px]">
+            Discover a world of treats, toys, and essentials handpicked for your furry friends
+          </p>
+        </div>
+        <!-- second item -->
+         <div class="mb-9">
+          <ul>
+            <li class="font-normal font-sora text-base lg:text-xl normal-black">Find a pet</li>
+            <li class="font-normal font-sora text-base lg:text-xl normal-black">Breeds</li>
+            <li class="font-normal font-sora text-base lg:text-xl normal-black">Contact Us</li>
+          </ul>
+         </div>
+
+         <!-- third item -->
+
+         <div class="mb-10">
+          <p class="font-medium font-sora text-sm lg:text-base normal-black py-2">Follow Us</p>
+          <i class="text-xl fa-brands fa-facebook mr-7"></i>
+          <i class="text-xl fa-brands fa-square-instagram mr-7"></i>
+          <i class="text-xl fa-brands fa-linkedin mr-7"></i>
+          <i class="text-xlfa-brands fa-youtube mr-7"></i>
+         </div>
+        </div>
+
+      </div>
+    </footer>
 
     <!-- footer end -->
   </body>
